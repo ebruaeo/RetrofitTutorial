@@ -28,8 +28,13 @@ class MainActivity : AppCompatActivity() {
         //       binding.helloWorld.text = data
         // }
 
-        viewModel.getWizard("Fleamont","Potter")
-        viewModel.harryPotterData.observe(this){data ->
+        /* viewModel.getWizard("Fleamont","Potter")
+         viewModel.harryPotterData.observe(this){data ->
+             binding.helloWorld.text = data
+         }*/
+
+        viewModel.submitFeedback(viewModel.suggestion)
+        viewModel.harryPotterData.observe(this) { data ->
             binding.helloWorld.text = data
         }
 
